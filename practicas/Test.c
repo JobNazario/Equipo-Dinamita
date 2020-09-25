@@ -2,7 +2,6 @@
 
 void main ( void ) 
 { 
-    printf("Asesorias a Citlali")
-    pritnf("De 7 a ...")
+    printf("Asesorias a Citlali");
+    pritnf("De 7 a ...");
 } 
-
