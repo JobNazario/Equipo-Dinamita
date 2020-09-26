@@ -1,15 +1,8 @@
 #include "stidio.h" 
 
-  
-
-  
-
 void main ( void ) 
-
 { 
-
-    printf("I am PM"); 
-	printf("I am JNC");
- 	printf("I am LCRA");
+    printf("Asesorias a Citlali");
+    pritnf("De 7 a ...");
+    scanf("%c");
 } 
-
