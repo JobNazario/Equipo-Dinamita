@@ -1,6 +1,6 @@
 #include "stdio.h" 
 
-void main(void) 
+int main() 
 {
 	long BitsVar,BitSel;
 	char OpToDo,VarRes;
