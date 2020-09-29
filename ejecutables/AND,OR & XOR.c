@@ -7,7 +7,7 @@ int main()
 
 	printf("De cuantos Bits es tu variable?:\n");
 	scanf("%ld",&BitsVar);
-	if(BitsVar == 8 || 16 || 32)
+	if(BitsVar == 8 || BitsVar==16 || BitsVar==32)
 	{
 		do{
 			printf("1-operacion AND\n 2-operacion OR\n 3-operacion XOR\n Selecione la opcion desada.");
@@ -40,7 +40,7 @@ int main()
 	}
 	else 
 	{
-		printf("Error!!!, El tamaño de la variable debe de ser 8,16 ó 32\n");
+		printf("Error!!!, El tamanio de la variable debe de ser 8,16 o 32\n");
 	}
 return 0;
 }
