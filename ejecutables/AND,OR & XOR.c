@@ -1,13 +1,13 @@
 #include "stdio.h" 
 
-void main ( void ) 
+void main(void) 
 {
 	long BitsVar,BitSel;
 	char OpToDo,VarRes;
 
 	printf("De cuantos Bits es tu variable?:\n");
 	scanf("%ld",&BitsVar);
-	if(BitsVar== 8 || 16 || 32);
+	if(BitsVar == 8 || 16 || 32);
 	{
 		do{
 			printf("1-operacion AND\n 2-operacion OR\n 3-operacion XOR\n Selecione la opcion desada.");
@@ -18,24 +18,27 @@ void main ( void )
 			{
 				if (OpToDo==1);
 				{
-					printf(VarRes &=~(1<<BitSel));
+					VarRes&=~(1<<BitSel);
+					printf("%ld",VarRes);
 				}
 				if else (OpToDo==2);
 				{
-					printf(VarRes |=(1<<BitSel));
+					VarRes|=(1<<BitSel);
+					printf("%ld",VarRes);
 				}
-				else
+				else 
 				{
-					printf(VarRes ^=(1<<BitSel));
+					VarRes^=(1<<BitSel);
+					printf("%ld",VarRes);
 				}
 			}
-			else
+			else 
 			{
 				printf("Error: operacion no disponible intente de nuevo\n");
 			}
 		}while(OpToDo <=3 && OpToDo>0);
 	}
-	else
+	else 
 	{
 		printf("Error!!!, El tamaño de la variable debe de ser 8,16 ó 32\n");
 	}
