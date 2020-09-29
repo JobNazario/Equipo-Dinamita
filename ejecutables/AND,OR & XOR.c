@@ -19,17 +19,18 @@ int main()
 				if (OpToDo==1)
 				{
 					VarRes&=~(1<<BitSel);
-					printf("%ld\n",VarRes);
+					printf(" Valor de variable = %ld\n",VarRes);
 				}
 				else if (OpToDo==2)
 				{
 					VarRes|=(1<<BitSel);
-					printf("%ld\n",VarRes);
+					printf(" Valor de variable = %ld\n",VarRes);
 				}
 				else 
 				{
 					VarRes^=(1<<BitSel);
-					printf("%ld\n",VarRes);
+					printf(" Valor de variable = %ld\n",VarRes);
+					
 				}
 			}
 			else 
