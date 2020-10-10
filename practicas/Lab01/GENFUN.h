@@ -4,6 +4,7 @@ typedef unsigned short unit16;
 typedef unsigned int unit32;
 
 /*prototypes*/
+void GENFUN_vCapsOn (uint8 *pu8Src, uint8 u8SizeOfList) ;
 void GENFUN_vCapsOff (uint8 *pu8Src, uint8 u8SizeOfList) ;
 
 /*definitions*/
