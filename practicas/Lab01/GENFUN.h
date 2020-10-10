@@ -6,6 +6,7 @@ typedef unsigned int unit32;
 /*prototypes*/
 void GENFUN_vCapsOn (uint8 *pu8Src, uint8 u8SizeOfList) ;
 void GENFUN_vCapsOff (uint8 *pu8Src, uint8 u8SizeOfList) ;
+uint8 GENFUN_u8GetOccurence (uint8 *pu8Src, uint8 u8Target, uint8 targetRepeat, uint8 u8SizeOfList) 
 
 /*definitions*/
 #define ASCCI_HIGH_THRESHOLD_CAPSON_TO_On	122
