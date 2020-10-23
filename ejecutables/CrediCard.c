@@ -12,10 +12,11 @@ void main (void)
   //gets(pu8Data);
   //printf("Codigo ingresado %s\n", pu8Data);
   //u8LuhnCheck(pu8Data,u8Check);
-unit8 u8CardNumber[16]={4,2,1,3,1,6,6,1,1,2,1,7,7,8,8,0} ; 
+unit8 u8CardNumber[16]={5,9,1,3,1,6,6,1,1,2,1,7,7,8,8,0} ; 
 u8Check= u8LuhnCheck(&u8CardNumber[0]); 
 //confirmar con el regreso
-if(u8LuhnCheck == 0)
+
+if(u8Check == 1)
   {
     printf("La tarjeta es valida ");
   }
@@ -37,13 +38,13 @@ unit8 u8LuhnCheck (unit8 *pu8Data)
   {
     if(i%2 == 0)
     {
-      n = (pu8Data[i]-'0') * 2;
+      n = (pu8Data[i]) * 2;
       if(n >= 10)
         n = (n - 10) + 1;
     } 
     else
     {
-      n = pu8Data[i]-'0';
+      n = pu8Data[i];
     }
     u8Check = u8Check + n;
   }
@@ -51,11 +52,13 @@ unit8 u8LuhnCheck (unit8 *pu8Data)
   if(u8Check%10 == 0)
   {
      mode=1;
-     printf("%i\n",mode );
+     
   }//%d la usamos para verificar que sean correctos las sumatorias
   else 
   {
     mode=0;
+    
   }
+ 
   return mode;
 }
