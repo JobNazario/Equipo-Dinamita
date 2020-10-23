@@ -1,24 +1,38 @@
 #include "stdio.h"
 #include "into.h"
 
-unit8 u8LuhnCheck ( unit8 *pu8Data,unit8 u8Check); 
+unit8 u8LuhnCheck ( unit8 *pu8Data); 
 void main (void) 
 {
   int u8Check;
   char *pu8Data; 
-  gets(pu8Data);
-  printf("Ingresa tu numero de tarjeta > "); //solicitud de credi card
-  printf("Codigo ingresado %s\n", pu8Data);
-  u8LuhnCheck(pu8Data,u8Check);
-} 
-/*{ unit8 au8CardNumber[16]={5,3,2,1,6,5,4,2,7,9,4,6,2,4,6,7} ; 
-u8Check= u8LuhnCheck(&au8CardNumber[0]); 
-} */
+  
+  //printf("Ingresa tu numero de tarjeta > "); //solicitud de credi card
+  
+  //gets(pu8Data);
+  //printf("Codigo ingresado %s\n", pu8Data);
+  //u8LuhnCheck(pu8Data,u8Check);
+unit8 u8CardNumber[16]={4,2,1,3,1,6,6,1,1,2,1,7,7,8,8,0} ; 
+u8Check= u8LuhnCheck(&u8CardNumber[0]); 
+//confirmar con el regreso
+if(u8LuhnCheck == 0)
+  {
+    printf("La tarjeta es valida ");
+  }
+  else 
+  {
+    printf("La tarjeta es invalida ");
+  }
 
-unit8 u8LuhnCheck (unit8 *pu8Data,unit8 u8Check)
+} 
+
+
+unit8 u8LuhnCheck (unit8 *pu8Data)
 { 
+	//L-NOTA: validar : primero operasion → condisionar el resultado →mode vinario y retornar
   int n = 0; //Algoritmo de Luhn
-  //u8Check = 0;
+  unit8 u8Check = 0;
+  unit8 mode=0;
   for(int i = 0; i < 16; i++) //Ciclo para ir sumando los numeros ya sea multiplicados x2 o con su valor original segun 
   {
     if(i%2 == 0)
@@ -36,10 +50,12 @@ unit8 u8LuhnCheck (unit8 *pu8Data,unit8 u8Check)
   //Si el resultado es multiplo de 10 entonces la sumatoria es correcta
   if(u8Check%10 == 0)
   {
-    printf("La tarjeta es valida %d\n", u8Check);
+     mode=1;
+     printf("%i\n",mode );
   }//%d la usamos para verificar que sean correctos las sumatorias
   else 
   {
-    printf("La tarjeta es invalida %d\n", u8Check);
+    mode=0;
   }
+  return mode;
 }
