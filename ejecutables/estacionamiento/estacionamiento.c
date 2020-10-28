@@ -34,7 +34,7 @@ void main()
 	}
    } while (opc != 0);
    
-    printf("Si usas un coche pulse 1:\nSi usas moto pulse 2:\nSi usas camion pulsa 3:\n"); // Pide al usuario que indique el tipo de vehículo a estacionar
+    printf("Si usas un sedan pulse 1:\nSi usas moto pulse 2:\nSi usas una SUV pulsa 3:\n"); // Pide al usuario que indique el tipo de vehículo a estacionar
     scanf("%i",&tipoVehiculo); // Asigna el número introducido a la variable
 
     if (tipoVehiculo != 1 && tipoVehiculo != 2 && tipoVehiculo != 3) 
