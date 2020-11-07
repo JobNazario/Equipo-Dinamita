@@ -2,9 +2,9 @@
 
 buscaminas
 ***************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <Mines.h>
+#include "stdio.h"
+#include "stdlib.h"
+#include "Mines.h"
 
 uint32 main()
 {
