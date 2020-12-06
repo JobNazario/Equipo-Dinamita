@@ -1,26 +1,33 @@
-#include <bml.h>
-#include <stdio.h>
-#include <windows.h> // SLEEP()
-#include <Types.h >
+#include "bml.h"
+#include "stdio.h"
+//#include "Types.h"
 
 void bml(void)
 {
-		while (1)
-	{
-		SM_Bomba_De_Infusion();
-		delay (3000);
-	}
-	void delay(int number_of_seconds)
-	{
-		 clock_t start_time = clock(); 
-	}
+int opcion;  
+do  
+{
+  system("cls");   
+  printf("\t1) programar bomba 1\n");
+  printf("\t2) programar bomba 2\n"); 
+  printf("\t3) programar bomba 3\n");
+  printf("\t4) Salir\n\n");
+  printf("     Seleccione una opcion: ");
+  scanf("%i",&opcion);				// Capturo opcion del Menu
 
-	void delay(int quantity_of_mililiters)
-	{
-    int milli_liters = 1000 * number_of_liters; 
- 
-    clock_t start_quantity_of_mililiters = clock(); 
-   
-    while (clock() < start_time + milli_liters) 
-	}
+  switch (opcion)
+  {
+   case 1: AdjustableTime();           
+           break;
+   case 2: AdjustableTime1();                     
+           break;
+   case 3: AdjustableTime2();                        
+           break;
+   case 4: break;                  	// Fin del Programa
+   default: printf("\nError, Ingrese una de las siete opciones\n\n");
+            system("pause");
+            break;     
+  }
+}while(opcion!=7);
+return 0;  
 }

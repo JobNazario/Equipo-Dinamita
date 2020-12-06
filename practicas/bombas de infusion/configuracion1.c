@@ -42,7 +42,7 @@ static void InfusionPumpSupply ( void )
 		{
 			if ( enState == enInfuserOff;
 			{
-				printf("selccione la opcion deseada\n 1. apagar \n 0.encender\n "); 
+				printf("selccione la opcion deseada\n 1. mantener inactiva \n 0.encender\n "); 
 				sacanf("%d", &u32ResetInstrument);
 				if( u32ResetInstrument == 0 )
 				{

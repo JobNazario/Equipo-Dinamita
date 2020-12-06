@@ -14,7 +14,7 @@ typedef enum
 	enStates,
 	enInfuserOn,
 	enInfuserOff,
-	enInterface = 0;
+	enInterface = 0
 }PresentStates;
 
 void InfusionPumpSupply (void);
