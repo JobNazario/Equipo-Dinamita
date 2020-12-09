@@ -1,8 +1,8 @@
 #include "bml.h"
 #include "stdio.h"
-//#include "Types.h"
+#include "stdlib.h"
 
-void bml(void)
+void bml (void)
 {
 int opcion;  
 do  
@@ -29,5 +29,5 @@ do
             break;     
   }
 }while(opcion!=7);
-return 0;  
+//return 0;  
 }
