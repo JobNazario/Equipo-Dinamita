@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Compiling with Script"
+
+gcc -c App1.c -o App1.o
+gcc -c App2.c -o App2.o
+gcc -c App3.c -o App3.o
+gcc -c bml.c -o bml.o
+gcc -c Examen progra.c -o Examen progra.o
+
+
+gcc -o MyApp Examen progra.o bml.o App1.o App2.o App3.o
+
+./MyApp
